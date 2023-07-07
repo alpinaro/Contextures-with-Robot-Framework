@@ -39,6 +39,18 @@ Sample run commands for terminal:
 "results" is the folder you want to save the reports.
 Execution automatically generates test reports.
 
+## Flexible
+
+Can add more filter conditions to test cases for narrowing down results. Code handles more than one filter conditions in a test case.
+
+Can create new test cases with different filtering conditions on the table.
+
+Can change existing test values and test for different output scale.
+
+Can create new filtering methods in ProjectInterface using existing utility in different ways.
+
+Can add more utility methods and increase the capabilities of the code.
+
 ## Structure
 
 ***resources/***
