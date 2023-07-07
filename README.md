@@ -6,6 +6,16 @@ This framework is built with Robot Framework and Selenium for UI testing of a we
 
 The framework is designed to be scalable so that new tests and functions can be easily added later.
 
+## Prerequisites
+
+Python must be installed on the system.
+
+Then following libraries in Python must be installed:
+
+* selenium
+* robotframework
+* robotframework-seleniumlibrary
+  
 ## Usage
 
 Test Cases in Test files can be run individually or in batches with clicking play icons in the IDE. Tests can also be run from the command line.
