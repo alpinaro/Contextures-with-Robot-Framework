@@ -15,16 +15,26 @@ Then following libraries in Python must be installed:
 * selenium
 * robotframework
 * robotframework-seleniumlibrary
-  
+
+To install:
+
+`pip install selenium 4.9.0`
+
+`pip install robotframework`
+
+`pip install robotframework-seleniumlibrary`
+
+> Note: Selenium 4.10 does not support robotframework yet.
+
 ## Usage
 
 Test Cases in Test files can be run individually or in batches with clicking play icons in the IDE. Tests can also be run from the command line.
 
 Sample run commands for terminal:
 
-robot -d results tests/Tests_WebTable.robot
+`robot -d results tests/Tests_WebTable.robot`
 
-robot -d results tests/Tests_DownloadFile.robot
+`robot -d results tests/Tests_DownloadFile.robot`
 
 "results" is the folder you want to save the reports.
 Execution automatically generates test reports.
