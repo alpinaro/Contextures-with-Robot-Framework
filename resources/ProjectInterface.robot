@@ -20,7 +20,7 @@ ${groups}    ''
 
 ${username}    ''
 ${filename}    SampleData.zip
-${timeout}    10s
+${timeout}    1s
 
 *** Keywords ***
 Start Suite
@@ -115,7 +115,7 @@ Unset Table
     Set Global Variable    ${subtable}    ${dictable}
 
 Create SubTable and Set Globals
-    [Documentation]    Creates a sub table with given indexes and record results to global variables.
+    [Documentation]    Creates a sub table with given indexes and records results to global variables.
     [Arguments]    ${indexes}
 
     ${count}    Get Length    ${indexes}
