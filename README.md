@@ -36,15 +36,27 @@ There must be a Chrome driver file in a location registered in the PATH in Syste
 
 Test Cases in Test files can be run individually or in batches with clicking play icons in the IDE. Tests can also be run from the command line.
 
-Sample run commands for terminal:
+Running all tests in tests folder:
+
+`robot -d results tests/`
+
+Running tests in a specific test file:
 
 `robot -d results tests/Tests_WebTable.robot`
 
 `robot -d results tests/Tests_DownloadFile.robot`
 
-You can execute a specific test case with name:
+Running a specific test case with name:
 
 `robot -d results --test "Are There Records with Less than 5 Units" tests/Tests_WebTable.robot`
+
+Running tests with including or excluding tags:
+
+`robot -d results --include regression tests/`
+
+`robot -d results --exclude filter tests/`
+
+`robot -d results --include regression --exclude file tests/`
 
 "results" is the folder you want to save the reports.
 Execution automatically generates test reports.
