@@ -4,7 +4,7 @@
 
 This framework is built with Robot Framework and Selenium for UI testing of a web application's HTML table and file download link.
 
-The framework is designed to be scalable so that new tests and functions can be easily added later.
+The framework is designed to be scalable and maintainable so that new tests and functions can be easily added later.
 
 ## Prerequisites
 
