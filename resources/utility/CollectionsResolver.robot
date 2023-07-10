@@ -16,9 +16,10 @@ Find List Element Indexes of Less Than Value
     [Arguments]    ${list}    ${value}
 
     ${indexes}    Create List
+    ${list_numeric}    Convert List Elements To Numeric    ${list}
 
-    FOR    ${index}    IN RANGE    0    ${list.__len__()}
-        Run Keyword If    ${list}[${index}] < ${value}    Append To List    ${indexes}    ${index}
+    FOR    ${index}    IN RANGE    0    ${list_numeric.__len__()}
+        Run Keyword If    ${list_numeric}[${index}] < ${value}    Append To List    ${indexes}    ${index}
     END
     [Return]    @{indexes}
 
@@ -27,7 +28,7 @@ Find List Element Indexes of Maximum Value
     [Arguments]    ${list}
 
     ${indexes}    Create List
-    ${list_numeric}    Evaluate    [float(item) for item in ${list}]
+    ${list_numeric}    Convert List Elements To Numeric    ${list}
     ${max}    Evaluate    max(${list_numeric})
 
     FOR    ${index}    IN RANGE    ${list_numeric.__len__()}
@@ -57,3 +58,10 @@ Create Sublist with Specific Indexes
         Append To List    ${sublist}    ${item}
     END
     [Return]    @{sublist}
+
+Convert List Elements To Numeric
+    [Documentation]    Returns the given list with its elements converted to numeric values.
+    [Arguments]    ${list}
+
+    ${list_numeric}    Evaluate    [float(item) for item in ${list}]
+    [Return]    ${list_numeric}
